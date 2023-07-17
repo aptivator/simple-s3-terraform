@@ -6,6 +6,7 @@
 * [Prerequisites](#prerequisites)
 * [Usage](#usage)
   * [Module Inputs](#module-inputs)
+  * [Module Outputs](#module-outputs)
   * [Configuring a Provider](#configuring-a-provider)
   * [Deploying S3 Bucket Without Logging](#deploying-s3-bucket-without-logging)
   * [Deploying S3 Bucket With Logging](#deploying-s3-bucket-with-logging)
@@ -40,6 +41,13 @@ recommended to easily acquire and activate different versions of the tool.
 * **tags**: a map with key/value properties to get a resource (*default*: **{}**)
 * **use_for_logs**: an indicator whether an S3 bucket is created to hold logs (*default*: **false**)
 * **use_versioning**: a flag to turn on or off versioning feature of a bucket (*default*: **false**)
+
+### Module Outputs
+
+`simple-s3-terraform` provides these outputs:
+
+* **arn**: amazon resource name for the created bucket
+* **id**: name of the deployed bucket
 
 ### Configuring a Provider
 
