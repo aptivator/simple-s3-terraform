@@ -138,7 +138,7 @@ addressed at a later time.
 NOTE: when deploying the example, terraform state will be stored locally.  Such approach
 is appropriate in this case.  For production deployments it is best to store terraform
 state in some object store in a shared account.  See `backend` documentation for a more
-detailed [explanation](https://developer.hashicorp.com/terraform/language/settings/backends/s3).
+detailed [introduction](https://developer.hashicorp.com/terraform/language/settings/backends/s3).
 
 ## Caveats
 
