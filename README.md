@@ -18,13 +18,13 @@
 The software was created as a part of a technical project to launch AWS S3 buckets
 with the following possible features: logging, tags, versioning, and KMS encryption.
 Terraform code is assembled as a module and can be referenced via a path to this
-repository.  The up-to-date AWS infrastructure constructs were employing in building
+repository.  The up-to-date AWS infrastructure constructs were employed in building
 `simple-s3-terraform`.
 
 ## Prerequisites
 
 Installed `terraform` is required.  [`tfenv`](https://github.com/tfutils/tfenv) is
-recommended to easily acquire and switch different versions of the tool.
+recommended to easily acquire and activate different versions of the tool.
 
 ## Usage
 
@@ -57,7 +57,7 @@ provider "aws" {
 
 ### Deploying S3 Bucket Without Logging
 
-Logging declaration would simply have to be ommitted to prevent S3 bucket logs.
+Logging declaration would simply have to be omitted to prevent S3 bucket logs.
 
 *terraform-deployment-file.tf*
 ```tf
@@ -101,7 +101,7 @@ module "s3_bucket" {
 ```
 
 `use_for_logs` parameter is more of a convenience.  It is easier to set the parameter
-to `true`, then to remember to declare `acl` as `log-delivery-write`.
+to `true` than to remember to declare `acl` as `log-delivery-write`.
 
 ### Using With Multiple Providers 
 
@@ -134,6 +134,11 @@ module "s3_bucket" {
 to launch the sample S3 bucket).  Automated tests are not provided at this time.  This type
 of quality assurance is still an ongoing development within a terraform space and will be
 addressed at a later time.
+
+NOTE: when deploying the example, terraform state will be stored locally.  Such approach
+is appropriate in this case.  For production deployments it is best to store terraform
+state in some object store in a shared account.  See `backend` documentation for a more
+detailed [explanation](https://developer.hashicorp.com/terraform/language/settings/backends/s3).
 
 ## Caveats
 
