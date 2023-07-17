@@ -33,14 +33,14 @@ recommended to easily acquire and activate different versions of the tool.
 
 `simple-s3-terraform` accepts the following parameters:
 
-* **bucket_name**: the name of the S3 bucket to be created (**required**)
+* **bucket_name**: the name of an S3 bucket to be created (**required**)
 * **acl**: one of AWS' canned access control list declarations (*default*: **"private"**)
 * **kms_key_arn**: amazon resource name for a data encryption key (*default*: **""**);
   whenever a key arn is not provided, a key will be automatically created
 * **logging**: a map with `target_bucket` and logs `target_prefix` properties (*default*: **{}**)
-* **tags**: a map with key/value properties to get a resource (*default*: **{}**)
+* **tags**: a map with key/value properties to label a resource (*default*: **{}**)
 * **use_for_logs**: an indicator whether an S3 bucket is created to hold logs (*default*: **false**)
-* **use_versioning**: a flag to turn on or off versioning feature of a bucket (*default*: **false**)
+* **use_versioning**: a flag to turn on or off the versioning feature of a bucket (*default*: **false**)
 
 ### Module Outputs
 
